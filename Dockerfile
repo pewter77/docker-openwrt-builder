@@ -1,12 +1,53 @@
-FROM debian:buster
+FROM ubuntu:focal
+
+ARG DEBIAN_FRONTEND="noninteractive"
 
 RUN apt-get update &&\
     apt-get install -y \
-        sudo time git-core subversion build-essential g++ bash make \
-        libssl-dev patch libncurses5 libncurses5-dev zlib1g-dev gawk \
-        flex gettext wget unzip xz-utils python python-distutils-extra \
-        python3 python3-distutils-extra rsync curl libsnmp-dev liblzma-dev \
-        libpam0g-dev cpio rsync && \
+    antlr3 \
+    asciidoc \
+    autoconf \
+    automake \
+    autopoint \
+    binutils \
+    build-essential \
+    bzip2 \
+    curl \
+    device-tree-compiler \
+    flex \
+    g++-multilib \
+    gawk \
+    gcc-multilib \
+    gettext \
+    git \
+    git-core \
+    gperf \
+    lib32gcc1 \
+    libc6-dev-i386 \
+    libelf-dev \
+    libglib2.0-dev \
+    libncurses5-dev \
+    libssl-dev \
+    libtool \
+    libz-dev \
+    msmtp \
+    p7zip \
+    p7zip-full \
+    patch \
+    python2.7 \
+    python3 \
+    qemu-utils \
+    rsync && \
+    subversion \
+    sudo \
+    swig \
+    texinfo \
+    uglifyjs \
+    unzip \
+    upx \
+    wget \
+    xmlto \
+    zlib1g-dev \
     apt-get clean && \
     useradd -m user && \
     echo 'user ALL=NOPASSWD: ALL' > /etc/sudoers.d/user
