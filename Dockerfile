@@ -37,7 +37,7 @@ RUN apt-get update &&\
     python2.7 \
     python3 \
     qemu-utils \
-    rsync && \
+    rsync \
     subversion \
     sudo \
     swig \
@@ -47,7 +47,7 @@ RUN apt-get update &&\
     upx \
     wget \
     xmlto \
-    zlib1g-dev \
+    zlib1g-dev && \
     apt-get clean && \
     useradd -m user && \
     echo 'user ALL=NOPASSWD: ALL' > /etc/sudoers.d/user
